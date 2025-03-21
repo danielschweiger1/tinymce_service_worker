@@ -20,3 +20,5 @@ only movie_2 was intercepted by the service worker
 2. firefox logs - index.html needs to provided via https (additional info: logs for service workers can be found here in firefox: about:debugging#/runtime/this-firefox and incognito does not work with service workers!)
 ![Screenshot_firefox_logs.png](Screenshot_firefox_logs.png)
 both are intercepted as expected movie_2 and movie_1
+
+it does work with an simple iframe on another index2.html page with the video element for example. So there must be an tinymce iframe issue.
