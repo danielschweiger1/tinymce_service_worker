@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TinyMCE v7 Example</title>
+    <script src="tinymce/tinymce.min.js" referrerpolicy="origin"></script>
+    <script type="text/javascript">
+        // Register the service worker
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                  navigator.serviceWorker.register('/service-worker.js', { scope: '/' })
+                    .then(registration => {
+                        console.log('Service Worker registered with scope:', registration.scope);
+                    })
+                    .catch(error => {
+                        console.error('Service Worker registration failed:', error);
+                    });
+            });
+        }
+
+        // Initialize TinyMCE
+        tinymce.init({
+            selector: "textarea",
+            license_key: 'gpl',
+            plugins: [
+                "advlist", "anchor", "autolink", "charmap", "code", "fullscreen",
+                "help", "image", "insertdatetime", "link", "lists", "media",
+                "preview", "searchreplace", "table", "visualblocks",
+            ],
+            toolbar: "undo redo | styles | bold italic underline strikethrough | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image",
+        });
+    </script>
+</head>
+<body>
+
+<textarea name="content">
+        <video width="320" height="240" controls>
+            <source src="movie_1.mp4" type="video/mp4">
+        </video>
+</textarea>
+
+
+ <video width="320" height="240" controls>
+            <source src="movie_2.mp4" type="video/mp4">
+        </video>
+
+</body>
+</html>
