@@ -9,7 +9,7 @@ Tinymce and the service worker are registered/inited here:
 
 movie_2 is a video element outside tinymce iframe and movie_1 is a  video element inside the tinymce iframe.
 
-The movie_2.mp4 ca be intercepted from firefox and chrome via service worker but not the movie_1.mp4 which is in the tinymce iframe (only in Chrome).
+The movie_2.mp4 can be intercepted from firefox and chrome via service worker but not the movie_1.mp4 which is in the tinymce iframe (only in Chrome).
 
 as seen in the logs:
 
